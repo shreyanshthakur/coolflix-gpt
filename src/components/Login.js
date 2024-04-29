@@ -10,6 +10,7 @@ import { auth } from "../utils/firebase";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addUser } from "../utils/userSlice";
+import { BG_IMAGE } from "../utils/constants";
 
 const Login = () => {
   const [isSignInForm, setIssignInForm] = useState(true);
@@ -89,10 +90,7 @@ const Login = () => {
     <div>
       <Header />
       <div className="absolute">
-        <img
-          src="https://maven-uploads.s3.amazonaws.com/120386748/projects/netflix%20image.jpg"
-          alt="logo"
-        />
+        <img src={BG_IMAGE} alt="bg-img" />
       </div>
       <form
         onSubmit={(e) => e.preventDefault()}
